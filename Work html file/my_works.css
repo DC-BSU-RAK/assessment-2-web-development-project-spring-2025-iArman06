@@ -1,0 +1,269 @@
+/*Styling the body*/
+body{
+    font-family: "Caveat", cursive;
+    background-color: black;
+    color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-size: 100px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px;
+    gap: 50px;
+}
+
+/*adding a box to the contents*/
+.box{
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+    padding: 25px;
+    margin: 20px;
+    max-width: 700px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.box p{
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: whitesmoke;
+}
+
+/*styling the text*/
+.text{
+    flex: 1;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: black;
+}
+
+/*positioning the images*/
+.pics{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.pics img{
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/*positioning and styling the big image on the right side of the webpage*/
+.big_img{
+    top: 200px;
+    right: 35px;    /*to maintain enough gap from right side near the box*/
+
+}
+.big_img img{
+    object-fit: cover;
+    width: 700px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/*adding a glow effect to line of text*/
+.scroll_down h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 50px;
+    font-size: 70px;
+    transition: text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.scroll_down h1:hover{
+    cursor: pointer;
+    color: rgb(165, 165, 255);
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 10px rgb(0, 0, 122),
+                 0 0 20px rgb(0, 0, 122),
+                 0 0 30px rgb(0, 0, 122),
+                 0 0 60px rgb(0, 0, 122);
+}
+
+/*styling the posters heading*/
+.heading h2{
+    font-family: "Caveat", cursive;
+    font-size: 50px;
+    margin: 20px;
+}
+
+/*styling the posters & flyers images*/
+.poster_pic{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    gap: 100px;
+}
+.poster_pic img{
+    width: 400px;
+    height: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    object-fit: cover;
+    filter: brightness(1.1) contrast(1.2) saturate(1.2) drop-shadow(0 0 10px #3c3d46); /*adding filters to the images*/
+    border-radius: 20px;                                                                 /*making curve at the corners*/
+}
+
+/*using css to align the video*/
+.video_cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*styling the return home button*/
+button{
+    padding: 17px 40px;
+    border-radius: 20px;
+    background-color: rgb(37, 28, 28);
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    box-shadow: blue 0px 15px 0px 0px;
+    color: hsl(0, 0%, 100%);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+button:hover{
+    box-shadow: rgba(201, 46, 70) 0px 7px 0px 0px;
+}
+button:active{
+    background-color: rgb(255, 56, 80);
+    box-shadow: rgba(201, 46, 70) 0px 7px 0px 0px;
+    transition: 200ms;
+}
+
+
+.work_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.work_button button{
+    width: 100%;
+    padding: 30px 0;
+    font-size: 2rem;
+    margin: 20px;
+}
+
+/*styling the text on the left side of button*/
+.work_text{
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-size: 30px;
+}
+
+/*shooting stars effect*/
+.stars
+{
+    position: fixed;    /*the position stays fixed when the user scrolls through the website*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;    /*the effect remains behind all the elements in the website*/
+    overflow: hidden;   /*anything that goes outside will be hidden*/
+}
+  
+/*styling the star*/
+.star 
+{
+    position: absolute;
+    /*adding gradient effect to the star*/
+    background: linear-gradient(to right, 
+      rgba(255,255,255,0) 0%, 
+      rgba(255,255,255,1) 50%, 
+      rgba(255,255,255,0) 100%);
+
+    height: 1px;
+    animation: shooting-star linear infinite;       /*to add animation to the star*/
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.7));
+}
+  
+/*styling the star*/
+.star::before 
+{
+    content: '';
+    position: absolute;
+    width: 3px; /*size of the small dot*/
+    height: 3px;
+    background: white;  
+    border-radius: 50%; /*to add the circular shape to the star*/
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 10px 2px white; /*used to give the glow effect to the star*/
+}
+  
+/*adding animation to the shooting star*/
+@keyframes shooting-star 
+{
+    /*starts with no animation*/
+    0% {    
+      transform: translateX(0) translateY(0) rotate(45deg); /*positioning the star*/
+      width: 0; /*the star starts small*/
+      opacity: 1;
+    }
+    /*the animation in between 0 and 100%*/
+    70% {   
+      opacity: 1;   /*the star will be visible*/
+    }
+    /*the final stage aimation*/
+    100% {
+      transform: translateX(1000px) translateY(1000px) rotate(45deg);
+      width: 300px; /*shows the full length of star tail*/
+      opacity: 0;   /*and finally the star fades out*/
+    }
+}
+
+
+/*to add the star background*/
+.stars::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /*adding multiple gradients for the effect of star*/
+    background: 
+      radial-gradient(1px 1px at 20% 30%, white, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 40% 70%, white, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 60% 20%, white, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 80% 90%, white, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 30% 50%, white, rgba(0,0,0,0));
+    background-size: 200px 200px;
+    animation: twinkle 5s infinite alternate;   /*to give a twinkle animation to the star*/
+}
+  
+
+/*keyframe for adding twinkle animation*/
+@keyframes twinkle {
+    0%  /*this is the starting state*/
+     { opacity: 0.3; }
+
+    100%    /*this is the ending state*/
+     { opacity: 0.8; }
+}

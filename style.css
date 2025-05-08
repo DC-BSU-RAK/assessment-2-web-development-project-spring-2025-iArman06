@@ -1,0 +1,473 @@
+/*Styling the body of the webpage*/
+body{
+    background-color: black;                /*adding background color*/
+    color: white;                           /*font color*/
+    margin: 0;
+    font-family: "Cal Sans", sans-serif;    /*font style*/
+    font-weight: 400;   /*boldness*/
+}
+html{
+    scroll-behavior: smooth;    /*for smooth scrolling effect from nav*/
+}
+
+/*styling the navigation section of the webpage*/
+#navigation{
+    padding: 10px;
+}
+
+/*adding the sections in nav bar next to logo horizontally*/
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /*to add equal spaces in between items*/
+    align-items: center;    /*centers items*/
+}
+
+/*styling all the sections in the unordered list*/
+nav ul li{
+    display: inline-block;  /*to display the nav sections in line*/
+    list-style: none;
+    margin: 10px 30px;
+}
+/*styling the links in the nav bar*/
+nav ul li a{
+    color: white;
+    text-decoration: none;  /*to remove the link underline*/
+    font-size: 30px;
+    position: relative;
+}
+/*adding hover effect to the links in the nav bar*/ 
+nav ul li a::after{
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: #0000ff;    /*under line effect color*/
+    position: absolute;
+    transition: 0.5s;   /*for smooth animation effect*/
+    left: 0;
+    bottom: -6px;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/*styling the home page texts*/
+.home_text{
+    display: flex;  /*diving the page into two columns*/
+    height: 100vh;
+}
+
+/*putting the image on the left*/
+.image{
+    align-items: left; /*to align the img to left*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;   /*only 1 image will appear and it wont repeat*/
+}
+
+/*putting the text on the right*/
+.home{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: xx-large;    /*using extra large fonts*/
+}
+
+ins{
+    color: #0000ff;
+    text-transform: uppercase;
+}
+
+
+/*styling the about me section*/
+#about{
+    padding: 90px 0;
+    color: whitesmoke;
+}
+.row{
+    display: flex;  /*to get the content side by side*/
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about_me1{
+    flex-basis: 35%;
+}
+.about_me1 img{
+    width: 100%;
+    border-radius: 100px;
+    padding: 50px;
+}
+.about_me2{
+    flex-basis: 60%;    /*to get some space between both the columns*/
+}
+
+.heading{
+    margin: 20px;
+    font-size: 60px;
+    font-weight: 600;
+    color: whitesmoke;
+}
+
+.my_info{
+    font-size: larger;
+}
+
+/*to style the skills, education and experience part of the section*/
+.skills_heading{
+    text-decoration: underline;
+    color: aqua;
+}
+ul{
+    list-style-type: none;
+    padding-left: 20;
+}
+big{
+    color: #0000ff;
+    margin: 10px;
+    text-decoration: none;
+}
+
+/*styling the button*/
+button{
+    padding: 17px 40px;
+    border-radius: 20px;
+    background-color: rgb(37, 28, 28);
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    box-shadow: blue 0px 15px 0px 0px;
+    color: hsl(0, 0%, 100%);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+button:hover{
+    box-shadow: rgba(201, 46, 70) 0px 7px 0px 0px;  /*color changes while hovering*/
+}
+button:active{
+    background-color: rgb(255, 56, 80);
+    box-shadow: rgba(201, 46, 70) 0px 7px 0px 0px;
+    transition: 200ms;
+}
+
+/*styling the My Service Secion*/
+.service{
+    font-size: 30px;
+}
+.service_list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+/* (> div) aims directly at the main div*/
+.service_list > div{
+    flex: 1;
+    padding: 20px;
+    margin: 20px;
+    min-width: 250px;   /*for responsiveness of the web*/
+    background-color: rgb(22, 22, 22);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+/*adding hover effect to the service boxes*/
+.service_list > div:hover{
+    transform: scale(1.05);
+    background-color: #0000ff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+}
+.service_list div i{
+    font-size: 50px;
+}
+
+/*styling the work button*/
+.work_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.work_button button{
+    width: 100%;
+    padding: 30px 0;
+    font-size: 2rem;
+    margin: 20px;
+}
+
+/*styling the text on the left side of button*/
+.work_text{
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-size: 30px;
+}
+
+/*styling reviewss section*/
+.review{
+    background-color: black;
+    padding: 50px 0;
+}
+.review_box{
+    background-size: rgb(29, 24, 24);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 15px;    /*to add circular corners at the corner*/
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.review .heading{
+    margin-bottom: 2rem;
+    color: whitesmoke;
+    font-size: 3rem;
+}
+.review_box img{
+    width: 15rem;
+    border-radius: 50%;
+    border: 3px solid black;
+    box-shadow: 0 0 25px rgb(0, 19, 122);   /*to add glow*/
+}
+.wrap{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);   /*to add 3 reviews in a line respectively*/
+    gap: 3rem;
+    width: 100%;
+}
+.review_item{
+    background-color: #0000ff;
+    border-radius: 20px;
+    padding: 20px;
+    cursor: pointer;    /*the cursor changes while hovering on the area*/
+    display: flex;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    color: whitesmoke;
+    transition: 0.3s ease;
+    flex-direction: column;
+}
+.review_item:hover{
+    border-color: blue;
+    transform: scale(1.02);
+}
+.review_item h2{
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.review_item p{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+
+/*styling the Contact us area*/
+
+#contact{
+    background-color: #000000; 
+    padding: 50px 0;
+}
+
+#contact .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+#contact .contact_left{
+    flex: 1;
+    background-color: black;    /*background color*/
+    padding: 30px;
+    border-radius: 8px; /*round corners*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   /*to add shadow effects on the box*/
+}
+
+#contact .contact_left h1{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: whitesmoke;  /*font color*/
+}
+
+#contact .contact_left p{
+    font-size: 1.1rem;
+    color: whitesmoke;
+    margin: 10px 0;
+}
+
+#contact .contact_left .social_icons a{
+    font-size: 2rem;
+    margin: 10px;
+    color: whitesmoke;
+    transition: color 0.3s;
+}
+
+#contact .contact_left .social_icons a:hover{
+    color: blue; 
+}
+#contact .contact_right {
+    flex: 1.5;  /*it will take more space compared to left column*/
+    background-color: black;
+    color: whitesmoke;
+    padding: 40px;
+    border-radius: 8px; /*rounded corners*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*styling the form layout*/
+#contact .contact_right form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  /*to add gap between items*/
+}
+
+#contact .contact_right form input,
+#contact .contact_right form textarea {
+    padding: 15px;
+    border-radius: 8px; /*rounded corners*/
+    border: 2px solid blue;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;  
+}
+
+#contact .contact_right form button {
+    padding: 15px 30px;
+    background-color: blue;
+    border: none;
+    color: whitesmoke;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/*hover effect for submitting button*/
+#contact .contact_right form button:hover {
+    background-color: blue; 
+}
+
+/*form message pop up*/
+#message{
+    color: #0000ff;
+    margin-top: -40px;
+    display: block;
+}
+
+/*footer section*/
+.copyright {
+    text-align: center;
+    padding: 20px;
+    background-color: blue;
+    color: #fff;
+    font-size: 20px;
+    border-top: 1px solid #333;
+}
+.copyright p {
+    margin: 5px 0;
+}
+
+/*shooting stars effect*/
+.stars
+{
+    position: fixed;    /*the position stays fixed when the user scrolls through the website*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;    /*the effect remains behind all the elements in the website*/
+    overflow: hidden;   /*anything that goes outside will be hidden*/
+}
+  
+/*styling the star*/
+.star 
+{
+    position: absolute;
+    /*adding gradient effect to the star*/
+    background: linear-gradient(to right, 
+      rgba(255,255,255,0) 0%, 
+      rgba(255,255,255,1) 50%, 
+      rgba(255,255,255,0) 100%);
+
+    height: 1px;
+    animation: shooting-star linear infinite;       /*to add animation to the star*/
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.7));
+}
+  
+/*styling the star*/
+.star::before 
+{
+    content: '';
+    position: absolute;
+    width: 3px; /*size of the small dot*/
+    height: 3px;
+    background: white;  
+    border-radius: 50%; /*to add the circular shape to the star*/
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 10px 2px white; /*used to give the glow effect to the star*/
+}
+  
+/*adding keyframe to add animation to the shooting star*/
+@keyframes shooting-star 
+{
+    /*starts with no animation*/
+    0% {    
+      transform: translateX(0) translateY(0) rotate(45deg); /*positioning the star*/
+      width: 0; /*the star starts small*/
+      opacity: 1;
+    }
+    /*the animation in between 0 and 100%*/
+    70% {   
+      opacity: 1;   /*the star will be visible*/
+    }
+    /*the final stage aimation*/
+    100% {
+      transform: translateX(1000px) translateY(1000px) rotate(45deg);
+      width: 300px; /*shows the full length of star tail*/
+      opacity: 0;   /*and finally the star fades out*/
+    }
+}
+
+
+/*to add the star background*/
+.stars::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /*adding multiple gradients for the effect of star*/
+    background: 
+      radial-gradient(1px 1px at 20% 30%, white, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 40% 70%, white, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 60% 20%, white, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 80% 90%, white, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 30% 50%, white, rgba(0,0,0,0));
+    background-size: 200px 200px;
+    animation: twinkle 5s infinite alternate;   /*to give a twinkle animation to the star*/
+}
+  
+
+/*keyframe for adding twinkle animation*/
+@keyframes twinkle {
+    0%  /*this is the starting state*/
+     { opacity: 0.3; }
+
+    100%    /*this is the ending state*/
+     { opacity: 0.8; }
+}
